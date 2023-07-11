@@ -2,12 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css'
 
+
 const Header = () => {
     return (
         <div className='default-container'>
             <Link to='/home'>Home</Link>
             <Link to='/products'>Products</Link>
             <Link to='/cart'>Cart</Link>
+            <Link to='/posts'>Posts</Link>
             <Link to='/friends'>Friends</Link>
             <Link to='/about'>About</Link>
 

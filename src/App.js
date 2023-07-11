@@ -1,13 +1,14 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Products from './Components/Products/Products';
 import About from './Components/About/About';
 import Home from './Components/Home/Home';
-import Header from './Components/Header/Header';
+
 import Main from './Components/Main/Main';
 import Cart from './Components/Cart/Cart';
 import Friends from './Components/Friends/Friends';
+import FriendDetails from './Components/FriendDetails/FriendDetails';
 
 function App() {
   const router = createBrowserRouter([
@@ -32,6 +33,13 @@ function App() {
             return fetch('https://jsonplaceholder.typicode.com/users');
           },
           element: <Friends></Friends>
+        },
+        {
+          path: '/friend/:friendId',
+          loader: async ({ params }) => {
+            return fetch(`https://jsonplaceholder.typicode.com/users/${params.friendId}`);
+          },
+          element: <FriendDetails></FriendDetails>
         }
       ]
     }

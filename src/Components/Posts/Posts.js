@@ -4,7 +4,7 @@ import Post from '../Post/Post';
 
 const Posts = () => {
     const posts = useLoaderData();
-    console.log(posts);
+
     return (
         <div>
             <h5 className='font-bold text-3xl'>All Post To Display here</h5>

@@ -6,3 +6,7 @@
 .default-container a:hover {
     background-color: orange;
 }
+
+.active {
+    background-color: aqua;
+}
